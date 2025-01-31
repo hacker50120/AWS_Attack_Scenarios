@@ -315,3 +315,44 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.
 https://aws.amazon.com/about-aws/whats-new/2019/06/now-use-iam-access-advisor-with-aws-
 organizations-to-set-permission-guardrails-confidently/
 ```
+---
+
+## Can Create Resource-based Policy using this tool
+
+https://awspolicygen.s3.amazonaws.com/policygen.html
+
+### Only the IAM use test1 can access the bucket
+```{
+  "Id": "Policy1736772298013",
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Stmt1736772294126",
+      "Action": [
+        "s3:ListAllMyBuckets",
+        "s3:ListBucket"
+      ],
+      "Effect": "Allow",
+      "Resource": "arn:aws:s3:::abhishek-iam",
+      "Principal": {
+        "AWS": [
+          "arn:aws:iam::571600850800:user/test1"
+        ]
+      }
+    }
+  ]
+}
+
+```
+
+aws s3 ls s3://abhishek-iam --profile test1 - can list all the buckets.
+
+Setting Permissions boundary
+
+https://docs.aws.amazon.com/images/IAM/latest/UserGuide/images/EffectivePermissions-rbp-boundary-id.png
+
+Now, the Resource base policy is: Can perform all the actions “S3:*”
+Abd boundary base policy is: Can list Only S3 buckets & objects
+
+Now, the effective policy is that only S3 buckets can be read.
+
