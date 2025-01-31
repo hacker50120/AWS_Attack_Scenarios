@@ -300,7 +300,9 @@ actions that your IAM identities and policies use. This helps you to better adhe
 least privilege. You can view the last accessed information for identities or policies that exist in IAM or
 AWS Organizations.
 
-References
+# References:
+```
+IAM Best Practices: https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html
 https://docs.aws.amazon.com/accounts/latest/reference/root-user-tasks.html
 https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html
 https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic-cross-
@@ -312,3 +314,4 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_revoke-sessions.ht
 https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html
 https://aws.amazon.com/about-aws/whats-new/2019/06/now-use-iam-access-advisor-with-aws-
 organizations-to-set-permission-guardrails-confidently/
+```
